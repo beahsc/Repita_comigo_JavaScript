@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 6 - REPITA COMIGO</title>
+
+
+</head>
+<body>
+    <div id="media">
+        
+        <script>
+            let cont = "S"
+            let aprov = 0
+
+            while(cont == "S"){
+                let n1 = parseFloat(prompt("Digite a 1º nota : "))
+                let n2 = parseFloat(prompt("Digite a 2º nota : "))
+                while(isNaN(n1 && n2)){
+                    n1 = parseFloat(prompt("Digite a 1º nota : "))
+                    n2 = parseFloat(prompt("Digite a 2º nota : "))
+                    if(isNaN(n1 && n2) == false){
+                        break
+                    }   
+                }
+                let media = (n1 + n2) / 2
+
+
+                document.write(`<br> Primeira nota : ${n1} <br>`)
+                document.write(`Segunda nota : ${n2} <br>`)
+                document.write(`A média final do aluno é igual a : ${media} <br>`)
+                if(media >= 9.5){
+                    document.write("Aprovado <br>")
+                    aprov += 1
+                }
+                else{
+                    document.write("Reprovado <br>")
+                }
+
+                cont = prompt("Quer continuar ? (S/N) : ").toUpperCase();
+                while(cont != "S" && cont != "N"){
+                    cont = prompt("Quer continuar ? (S/N) ").toUpperCase();
+                    if(cont == "N"){
+                        break
+                    }
+                }
+                if(cont == "N"){
+                    break
+                }
+            }
+            document.write(`<br><br> Quantidade de alunos aprovados : ${aprov}`)
+        </script>
+    </div>
+
+</body>
+</html>

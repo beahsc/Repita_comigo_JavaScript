@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 5 - REPITA COMIGO</title>
+</head>
+<body>
+    <script>
+
+        let number1 = parseInt(prompt("Digite o primeiro número: "))
+        let number2 = parseInt(prompt("Digite o segundo número: "))
+        let number1i = number1, number2i = number2
+        let inicio = 0
+        let fim = 0
+
+        funcao = function(){
+            for(number1; number1 <= number2; number1++){
+                inicio += number1
+                fim += 1
+            }
+
+            console.log(inicio)
+            console.log(fim)
+            document.write ("A média aritmética dos números entre os números escolhidos: " + number1i + " e " + number2i + " é de: " + inicio/fim + "<br>")
+            document.write ("A média aritmética entre: " + number1i + " e " + number2i + " é de: " + (number1i + number2i)/2)
+
+        }
+
+        if(number1 < number2){
+            funcao()
+        }
+
+        else if (number1 == number2){
+            funcao()
+        }
+
+        else{
+            while(number1 > number2){
+                let number1 = parseInt(prompt("Digite o primeiro número: "))
+                let number2 = parseInt(prompt("Digite o primeiro número: "))
+                let number1i = number1, number2i = number2
+                if(number1 < number2){
+                    for(number1; number1 <= number2; number1++){
+                        inicio += number1
+                        fim += 1
+                    }
+                    console.log(inicio)
+                    console.log(fim)
+                    document.write ("A média aritmética entre: " + number1i + " e " + number2i + " é de: " + inicio/fim + "<br>")
+                    document.write ("A média aritmética entre: " + number1i + " e " + number2i + " é de: " + (number1i + number2i)/2)
+                        break
+                }
+            }
+        }
+
+    </script>
+</body>
+</html>
